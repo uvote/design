@@ -1,7 +1,6 @@
 import { ButtonTypes } from "../examples/buttons"
-import { FC } from "react"
 
-export const HomePage: FC = () => {
+export function HomePage() {
   return (
     <>
       <ButtonTypes />

@@ -4,16 +4,15 @@ import {
   ColorProp,
   MainColor,
 } from "trunx"
-import { FC, PropsWithChildren } from "react"
+import { PropsWithChildren } from "react"
 
 type ButtonProps = Omit<_ButtonProps, "color" | "isRounded"> &
   ColorProp<Extract<MainColor, "warning" | "success">>
 
-export const Button: FC<PropsWithChildren<ButtonProps>> = ({
-  children,
-  ...props
-}) => (
-  <_Button isRounded {...props}>
-    {children}
-  </_Button>
-)
+export function Button({ children, ...props }: PropsWithChildren<ButtonProps>) {
+  return (
+    <_Button isRounded {...props}>
+      {children}
+    </_Button>
+  )
+}
